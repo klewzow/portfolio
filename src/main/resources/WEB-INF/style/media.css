@@ -1,0 +1,50 @@
+@media screen and (max-width: 1100px) {
+    .wrapper {
+        max-width: 800px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header__menu {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        max-width: 400px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .block__name {
+        flex-direction: column;
+    }
+
+    .block__name__info {
+        margin: 0 0px 20px 0;
+    }
+
+    .block_content {
+        flex-direction: column;
+    }
+
+    .block__project__content {
+        flex-direction: column;
+    }
+
+    .block__project__cart {
+        margin-bottom: 15px;
+    }
+
+    .block__contact__content {
+        flex-direction: column;
+    }
+    .footer  {
+        flex-direction: column;
+    }
+}
