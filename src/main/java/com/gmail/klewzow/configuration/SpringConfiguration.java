@@ -1,6 +1,7 @@
 package com.gmail.klewzow.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,6 +17,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
 @EnableWebMvc
+@AutoConfiguration
 @ComponentScan("com.gmail.klewzow")
 public class SpringConfiguration implements WebMvcConfigurer {
 
