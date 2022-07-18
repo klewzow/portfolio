@@ -7,19 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ControllerFull {
 
     @GetMapping("/")
-   public String indexPage(){
+    public String indexPage() {
         return "index";
     }
+
     @GetMapping("/skill")
-    public String skillPage(){
+    public String skillPage() {
         return "index";
     }
+
     @GetMapping("/project")
-    public String projectPage(){
+    public String projectPage() {
         return "index";
     }
+
     @GetMapping("/contact")
-    public String contactPage(){
+    public String contactPage() {
         return "index";
     }
 }
