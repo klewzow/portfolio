@@ -11,14 +11,12 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-@Configuration
-@ComponentScan("com.gmail.klewzow")
-@EnableWebMvc
+
 public class SpringConfiguration implements WebMvcConfigurer {
 
     private ApplicationContext applicationContext;
     WebMvcConfigurationSupport webMvcConfigurationSupport;
-    @Autowired
+
     public SpringConfiguration(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
