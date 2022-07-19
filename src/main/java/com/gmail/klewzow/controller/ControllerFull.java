@@ -1,28 +1,30 @@
 package com.gmail.klewzow.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class ControllerFull {
 
-    @GetMapping("/")
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String indexPage() {
         return "index";
     }
 
-    @GetMapping("/skill")
+
+    @RequestMapping(value = "/skill", method = RequestMethod.GET)
     public String skillPage() {
         return "index";
     }
 
-    @GetMapping("/project")
+    @RequestMapping(value = "/project", method = RequestMethod.GET)
     public String projectPage() {
         return "index";
     }
 
-    @GetMapping("/contact")
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String contactPage() {
         return "index";
     }
