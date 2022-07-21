@@ -14,12 +14,6 @@ public class ControllerFull {
     public String indexPage() {
         return "index";
     }
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String testPage() {
-        return "index";
-    }
-
-
 
     @RequestMapping(value = "/skill", method = RequestMethod.GET)
     public String skillPage() {
