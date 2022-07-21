@@ -1,6 +1,7 @@
 package com.gmail.klewzow.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,6 +14,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
 @ComponentScan("com.gmail.klewzow")
+@EnableAutoConfiguration
 @EnableWebMvc
 public class SpringConfiguration implements WebMvcConfigurer {
 
@@ -24,7 +26,6 @@ public class SpringConfiguration implements WebMvcConfigurer {
 
     /* ******************************************************************* */
     /* GENERAL CONFIGURATION ARTIFACTS */
-    /* Static Resources, i18n Messages, Formatters (Conversion Service) */
     /* ******************************************************************* */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -56,7 +57,6 @@ public class SpringConfiguration implements WebMvcConfigurer {
 
     /*
      * CONFIGURATION Thymeleaf ViewResolverRegistry
-     *
      */
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
