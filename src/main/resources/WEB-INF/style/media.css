@@ -1,50 +1,108 @@
 @media screen and (max-width: 1100px) {
     .wrapper {
-        max-width: 800px;
+        max-width: 700px;
+        border: 1px solid rebeccapurple;
     }
 
     .header {
         flex-direction: column;
+        align-items: center;
     }
 
     .header__menu {
-        padding-top: 25px;
+        padding-bottom: 25px;
     }
+
+    .name__info {
+        max-width: 400px;
+        justify-content: center;
+        padding: 10px 15px;
+        margin: 10px auto;
+    }
+    .content__education {
+      
+        margin-left: 100px;
+
+
+    }
+    .skills_image>img{
+     width: 150px;
+    }
+    .content_skills {
+ 
+        max-width: 350px;
+    }
+
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .wrapper {
-        max-width: 400px;
+        max-width: 300px;
+        border: 1px solid rebeccapurple;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
     }
 
     .header__menu {
         display: none;
     }
 
-    .block__name {
+    .block__education {
         flex-direction: column;
     }
 
-    .block__name__info {
-        margin: 0 0px 20px 0;
+    .skills_value {
+        max-width: 300px;
     }
 
-    .block_content {
-        flex-direction: column;
+    .skills_image {
+        display: none;
     }
 
-    .block__project__content {
-        flex-direction: column;
-    }
+        .content__education {
+            width: 300px;
+            padding: 10px;
+            margin-left: 10px;
 
-    .block__project__cart {
-        margin-bottom: 15px;
-    }
 
-    .block__contact__content {
-        flex-direction: column;
+        }
+
+        .content {
+
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .name__info {
+            max-width: 400px;
+            padding: 10px 35px;
+            margin: 10px 10px;
+        }
+
+        .project__card {
+            margin-bottom: 15px;
+        }
+
+
+
+
+
+        .block__project__content {
+            flex-direction: column;
+        }
+
+        .block__project__cart {
+            margin-bottom: 15px;
+        }
+
+        .block__contact__content {
+            flex-direction: column;
+        }
+
+        .footer {
+            flex-direction: column;
+        }
     }
-    .footer  {
-        flex-direction: column;
-    }
-}

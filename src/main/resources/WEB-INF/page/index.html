@@ -5,14 +5,15 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;700&display=swap" rel="stylesheet">
-    <link href="style/clear__css.css" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet">
-    <link href="style//media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;700&display=swap"
+        rel="stylesheet">
+    <link href="../style/clear__css.css" th:href="@{style/clear__css.css}" rel="stylesheet">
+    <link href="../style/style.css" th:href="@{style/style.css}" rel="stylesheet">
+    <link href="../style//media.css" th:href="@{style/media.css}" rel="stylesheet">
     <link rel="/preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap" rel="stylesheet">
-     <link rel="icon" type="image/x-icon" href="image/favicon.png">
+    <link rel="icon" type="image/x-icon" href="image/favicon.png">
     <meta name="viewport" content="width=device-width,initial-scale=1">.
     <meta charset=utf-8>
 
@@ -24,75 +25,129 @@
     <div class="wrapper">
 
         <div class="header">
-            <img class="header__image" src="image/horizontal_on_white_by_logaster.png" alt="Logo Img">
+            <img class="header__image" src="../image/horizontal_on_white_by_logaster.png"
+                th:src="@{image/horizontal_on_white_by_logaster.png}" alt="Logo Img">
             <div class="header__menu">
                 <a href="#" th:href="@{/skill}" class="header__link">skill</a>
                 <a href="#" th:href="@{/project}" class="header__link">project </a>
                 <img class="header__link__image" src="../image/setting.svg" alt="">
-                <a href="#"  th:href="@{/contact}" class="header__link">contact</a>
+                <a href="#" th:href="@{/contact}" class="header__link">contact</a>
             </div>
         </div>
         <div class="block__name">
-            <div class="block__name__info">
-                <p class="name">Klevtsov Dmitry</p>
-                <p class="text">Hello! Am a software developer and here is my portfolio website. Here you’ll learn about
-
-                <div> <a class="block__name__button">Hire me</a></div>
-            </div>
-            <div class="block__name__photo">
-                <img src="image/logo_photo.jpg" alt="" class="photo">
+            <div class="container">
+                <div class="content">
+                    <div class="name__info">
+                        <p class="name__info__header">Klevtsov Dmitry</p>
+                        <p class="name__info__text">Hello! Am a software developer and here is my portfolio website.
+                            Here you’ll learn about
+                        <div class="name__button">
+                            <a class="name__button__items">Hire me</a>
+                        </div>
+                    </div>
+                    <div class="name__photo">
+                        <img src="../image/logo_photo.jpg" th:src="@{image/logo_photo.jpg}" alt="" class="photo">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="block__skill">
+        <div class="block__education">
             <hr>
-            <div class="bloc_tag">
-                <p>Skills</p>
-            </div>
-            <div class="block_content">
-                <div class="skills_value">
-                    <p>I have a vast experience in the following web technologies:</p>
-                    <img src="image/bootstrap.svg" alt="">
-                    <img src="image/css3.svg" alt="">
-                    <img src="image/html5.svg" alt="">
-                    <img src="image/js.svg" alt="">
+            <div class="container">
+                <div class="content">
+                    <div class="content__info">
+                        <p>Education</p>
+                    </div>
                 </div>
-                <div class="skills_image">
-                    <img src="image/skil_logo.png" alt="">
+                <div class="content content__education">
+                    <div>
+                        <p> Online courses prog.kiev.ua 05.2021 - 01.2022</p>
+                        <p> National Transport University 2004 - 2009</p>
+                    </div>
                 </div>
-
             </div>
         </div>
+
+
+        <div class="block__skill">
+
+            <hr>
+            <div class="container">
+                <div class="content">
+                    <div class="content__info">
+                        <p>Skills</p>
+                    </div>
+                </div>
+
+
+                <div class="content content_skills">
+                    <div class="skills_value">
+                        <p class="key_skills">Key skills:</p>
+                        <p class="key_skills_info"> Java, OOP <br>
+                            spring framework <br>
+                            hibernate framework <br><br></p>
+                        <p class="key_skills">Knowledge of technology:</p>
+                        <p class="key_skills_info">
+                            Java 8-16 <br>
+                            Multithreading. Collections framework<br>
+                            Spring Stack: Boot, MVC, Data, Security<br>
+                            JDBC. JPA/Hibernate<br>
+                            Servlets API<br>
+                            JSP, JSTL, Thymeleaf<br>
+                            MySQL<br>
+                            Maven<br>
+                            Basics of HTML/CSS/PHP/JavaScript<br>
+                            Git, GitHub.</p>
+                    </div>
+                    <div class="skills_image">
+                        <img src="../image/skil_logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="block__project">
             <hr>
-            <div class="bloc_tag">
+            <div class="container">
+                <div class="content">
+                    <div class="content__info">
+                        <p>Project</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class=" content content__project">
 
-                <p>Project</p>
-            </div>
-            <div class="block__project__content">
-                <div class="block__project__cart">
-                    <img src="image/Rectangle 5.png" alt="">
-                    <p class="block__project__text">Made a social media manager template using HTML 5, CSS and JS only.
-                    </p>
-                    <div><a class="block__project__link" href="#"> <img src="image/link_img.svg" alt="">
-                            <p>Visit site</p>
-                        </a></div>
-                </div>
-                <div class="block__project__cart">
-                    <img src="image/Rectangle 5-1.png" alt="">
-                    <p class="block__project__text">Made an I.P address tracking website.</p>
-                    <div><a class="block__project__link" href="#"> <img src="image/link_img.svg" alt="">
-                            <p>Visit site</p>
-                        </a></div>
-                </div>
-                <div class="block__project__cart">
-                    <img src="image/Rectangle 5-2.png" alt="">
-                    <p class="block__project__text">Made a simple card page using HTML 5 and CSS 3</p>
-                    <div><a class="block__project__link" href="#"> <img src="image/link_img.svg" alt="">
-                            <p>Visit site</p>
-                        </a></div>
+                        <div class="project__card">
+                            <img src="../image/Rectangle 5.png" alt="">
+                            <span>Made A Social Media Manager Template Using HTML 5, CSS And JS Only. </span>
+                            <div><a class="block__project__link" href="#">
+                                    <img src="../image/link_img.svg" alt="">
+                                    <p>Visit site</p>
+                                </a></div>
+                        </div>
+                        <div class="project__card">
+                            <img src="../image/Rectangle 5-1.png" alt="">
+                            <span>Made an I.P address tracking website.</span>
+                            <div><a class="block__project__link" href="#"> <img src="../image/link_img.svg" alt="">
+                                    <p>Visit site</p>
+                                </a></div>
+                        </div>
+                        <div class="project__card">
+                            <img src="../image/Rectangle 5-2.png" alt="">
+                            <span>Made a simple card page using HTML 5 and CSS 3 </span>
+                            <div><a class="block__project__link" href="#"> <img src="../image/link_img.svg" alt="">
+                                    <p>Visit site</p>
+                                </a></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
         <div class="block__contact">
             <hr>
             <div class="bloc_tag">
@@ -121,16 +176,20 @@
                 <div class="link">
                     <p>My social media links:</p>
                     <div>
-                        <a href="#"><img src="image/linkedin-svgrepo-com 1.svg" alt=""></a>
-                        <a href="#"><img src="image/whatsapp-svgrepo-com 1.svg" alt=""></a>
-                        <a href="#"><img src="image/twitter-svgrepo-com 1.svg" alt=""></a>
-                        <a href="#"><img src="image/gmail-svgrepo-com 1.svg" alt=""></a>
+                        <a href="#"><img src="../image/linkedin-svgrepo-com 1.svg"
+                                th:src="image/linkedin-svgrepo-com 1.svg" alt=""></a>
+                        <a href="#"><img src="../image/whatsapp-svgrepo-com 1.svg"
+                                th:src="image/whatsapp-svgrepo-com 1.svg" alt=""></a>
+                        <a href="#"><img src="../image/twitter-svgrepo-com 1.svg"
+                                th:src="image/twitter-svgrepo-com 1.svg" alt=""></a>
+                        <a href="#"><img src="../image/gmail-svgrepo-com 1.svg" th:src="image/gmail-svgrepo-com 1.svg"
+                                alt=""></a>
                     </div>
                 </div>
                 <div class="github">
                     <p>Where to get my code:</p>
                     <div class="git__logo">
-                        <a href=""> <img src="image/github-svgrepo-com 1.svg" alt="">
+                        <a href=""> <img src="../image/github-svgrepo-com 1.svg" th:src="image/github-svgrepo-com 1.svg" alt="">
                         </a>
                         <span> @john-doe on github</span>
                     </div>
