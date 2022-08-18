@@ -22,11 +22,18 @@ public class ControllerFull {
 
     @RequestMapping(value = "/project", method = RequestMethod.GET)
     public String projectPage() {
-        return "index";
+        return "progect";
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String contactPage() {
         return "index";
     }
+
+    @RequestMapping(value = "/document__generator", method = RequestMethod.GET)
+    public String document__generator() {
+        return "document__generator";
+    }
+
+
 }
