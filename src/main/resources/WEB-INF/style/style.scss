@@ -1,0 +1,212 @@
+@mixin social-link($img, $width, $higth) {
+    width: $width;
+    height: $higth;
+    background-image: url($img);
+    background-position: center center;
+    background-size: $width $higth;
+    display: inline-block;
+    margin-right: 15px;
+
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    padding: 10px;
+}
+
+.wrapper {
+    max-height: 100%;
+    border: 1px solid gold;
+}
+
+.header {
+
+    &_content {
+        display: flex;
+
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 50px 250px 10px 0;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        transition: all 0.3s;
+
+        >a:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__link {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 35px;
+    }
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.row {
+    &:after {
+        content: '';
+        width: 90%;
+        height: 1px;
+        left: 5%;
+        background: linear-gradient(90deg, rgba(237, 237, 237, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(237, 237, 237, 1) 100%);
+        display: inline-block;
+    }
+}
+
+.header-img {
+    max-width: 250px;
+}
+
+//  Block name *******************************************************************************************************************
+.name {
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 35px 0;
+    }
+
+    &__info {
+        padding: 25px 150px 25px 25px;
+        line-height: 45px;
+        max-width: 450px;
+
+        >p {
+            color: black;
+            line-height: 25px;
+        }
+
+        >a {
+            text-decoration: none;
+        }
+
+        &>a:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+
+        &>a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: black;
+        }
+
+        &>a:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__image {
+
+        &>img {
+            max-width: 250px;
+            border-radius: 25px;
+        }
+    }
+}
+
+
+.sity {
+    &::before {
+        content: '';
+        @include social-link('../image/contactInfo/city-svgrepo-com.svg', 35px, 35px);
+    }
+}
+
+.phone {
+
+    &__telegram {
+        &::before {
+            content: '';
+            @include social-link('../image/contactInfo/telegram-svgrepo-com.svg', 35px, 35px);
+        }
+    }
+
+    &__watsapp {
+        &::before {
+            content: '';
+            @include social-link('../image/contactInfo/whatsapp-svgrepo-com.svg', 35px, 35px);
+        }
+    }
+}
+
+.mail {
+    &::before {
+        content: '';
+        @include social-link('../image/contactInfo/email-svgrepo-com.svg', 35px, 35px);
+    }
+}
+
+.github {
+    &::before {
+        content: '';
+        @include social-link('../image/contactInfo/icons8-github.svg', 35px, 35px);
+    }
+}
+
+
+
+
+// Block Skill
+
+.skills {
+    padding: 50px;
+    &__image {
+       >img{
+        max-width: 450px;
+       }
+    }
+}
+ 
+.scills {
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+}
+.about {
+    color: coral;
+    padding-top: 20px;
+}
+.info {
+    display: flex;
+    
+    &__text{
+        width: 450px;
+        color: black;
+        font-weight: 500;
+    }
+}

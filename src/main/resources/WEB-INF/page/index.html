@@ -5,16 +5,23 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;700&display=swap"
-        rel="stylesheet">
-    <link href="../style/clear__css.css" th:href="@{style/clear__css.css}" rel="stylesheet">
-    <link href="../style/style.css" th:href="@{style/style.css}" rel="stylesheet">
-    <link href="../style//media.css" th:href="@{style/media.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;600;800&display=swap" rel="stylesheet">
+
+    <script src="../js/pScript.js" th:href="@{js/pScript.js}"></script>
+
     <link rel="/preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/normalize.css">
+
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/media.css">
+
+
     <link rel="icon" type="image/x-icon" href="image/favicon.png">
-    <meta name="viewport" content="width=device-width,initial-scale=1">.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset=utf-8>
 
 
@@ -22,184 +29,206 @@
 </head>
 
 <body>
+    <!-- Header -->
+
     <div class="wrapper">
-
         <div class="header">
-            <a href="#" th:href="@{/}"> 
-            <img class="header__image" src="../image/horizontal_on_white_by_logaster.png"
-                th:src="@{image/horizontal_on_white_by_logaster.png}" alt="Logo Img">
-            </a>
-            <div class="header__menu">
-                <a href="#" th:href="@{/skill}" class="header__link">skill</a>
-                <a href="progect.html" th:href="@{/project}" class="header__link">project </a>
-                <img class="header__link__image" src="../image/setting.svg" alt="">
-                <a href="#" th:href="@{/contact}" class="header__link">contact</a>
-            </div>
-        </div>
-        <div class="block__name">
-            <div class="container">
-                <div class="content">
-                    <div class="name__info">
-                        <p class="name__info__header">Klevtsov Dmitry</p>
-                        <p class="name__info__text">Hello! Am a software developer and here is my portfolio website.
-                            Here you’ll learn about
-                        <div class="name__button">
-                            <a class="name__button__items">Hire me</a>
-                        </div>
-                    </div>
-                    <div class="name__photo">
-                        <img src="../image/logo_photo.jpg" th:src="@{image/logo_photo.jpg}" alt="" class="photo">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block__education">
-            <hr>
-            <div class="container">
-                <div class="content">
-                    <div class="content__info">
-                        <p>Education</p>
-                    </div>
-                </div>
-                <div class="content content__education">
-                    <div>
-                        <p> Online courses prog.kiev.ua java developer &emsp;-> &emsp;05.2021 - 01.2022</p>
-                        <p> National Transport University &emsp; ->&emsp;2004 - 2009</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="block__skill">
-
-            <hr>
-            <div class="container">
-                <div class="content">
-                    <div class="content__info">
-                        <p>Skills</p>
-                    </div>
-                </div>
-
-
-                <div class="content content_skills">
-                    <div class="skills_value">
-                        <p class="key_skills">Key skills:</p>
-                        <p class="key_skills_info"> Java, OOP <br>
-                            spring framework <br>
-                            hibernate framework <br><br></p>
-                        <p class="key_skills">Knowledge of technology:</p>
-                        <p class="key_skills_info">
-                            Java 8-16 <br>
-                            Multithreading. Collections framework<br>
-                            Spring Stack: Boot, MVC, Data, Security<br>
-                            JDBC. JPA/Hibernate<br>
-                            Servlets API<br>
-                            JSP, JSTL, Thymeleaf<br>
-                            MySQL<br>
-                            Maven<br>
-                            Basics of HTML/CSS/PHP/JavaScript<br>
-                            Git, GitHub.</p>
-                    </div>
-                    <div class="skills_image">
-                        <img src="../image/skil_logo.png" th:src="@{image/skil_logo.png}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="block__project">
-            <hr>
-            <div class="container">
-                <div class="content">
-                    <div class="content__info">
-                        <p>Project</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class=" content content__project">
-
-                        <div class="project__card">
-                            <img src="../image/Rectangle 5.png" th:src="@{image/Rectangle 5.png}" alt="">
-                            <span>Made A Social Media Manager Template Using HTML 5, CSS And JS Only. </span>
-                            <div><a class="block__project__link"  href="#">
-                                    <img src="../image/link_img.svg" th:src="@{image/link_img.svg}" alt="">
-                                    <p>Visit site</p>
-                                </a></div>
-                        </div>
-                        <div class="project__card">
-                            <img src="../image/Rectangle 5-1.png" alt="">
-                            <span>Made an I.P address tracking website.</span>
-                            <div><a class="block__project__link" href="#"> <img src="../image/link_img.svg" alt="">
-                                    <p>Visit site</p>
-                                </a></div>
-                        </div>
-                        <div class="project__card">
-                            <img src="../image/Rectangle 5-2.png" alt="">
-                            <span>Made a simple card page using HTML 5 and CSS 3 </span>
-                            <div><a class="block__project__link" href="#"> <img src="../image/link_img.svg" alt="">
-                                    <p>Visit site</p>
-                                </a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <div class="block__contact">
-            <hr>
-            <div class="bloc_tag">
-                <p>Contact</p>
-            </div>
-            <div class="block__contact__content">
-
-                <div class="block__contact__img">
-                    <img src="../image/contact_image.png" th:src="@{image/contact_image.png}" alt="contact_image">
-                </div>
-                <div class="block__contact__form">
-                    <form action="" method="post">
-                        <label for="email">Email</label>
-                        <input class="block__contact__email" maxlength="35" type="email" name="email">
-                        <br>
-                        <label for="Message">Message</label>
-                        <textarea class="block__contact__messege" draggable="false" type="text"
-                            name="Message"></textarea>
-                        <input class="block__contact__button" type="button" name="Submit" id="" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="footer__top">
-                <div class="link">
-                    <p>My social media links:</p>
-                    <div>
-                        <a href="#"><img src="../image/linkedin-svgrepo-com 1.svg"
-                                th:src="@{image/linkedin-svgrepo-com 1.svg}" alt=""></a>
-                        <a href="#"><img src="../image/whatsapp-svgrepo-com 1.svg"
-                                th:src="@{image/whatsapp-svgrepo-com 1.svg}" alt=""></a>
-                        <a href="#"><img src="../image/twitter-svgrepo-com 1.svg"
-                                th:src="@{image/twitter-svgrepo-com 1.svg}" alt=""></a>
-                        <a href="#"><img src="../image/gmail-svgrepo-com 1.svg" th:src="@{image/gmail-svgrepo-com 1.svg}"
+            <div class="container row">
+                <div class="header_content">
+                    <div class="header__logo">
+                        <a href=""><img src="../image/horizontal_on_white_by_logaster.png" class=" header-img"
                                 alt=""></a>
                     </div>
-                </div>
-                <div class="github">
-                    <p>Where to get my code:</p>
-                    <div class="git__logo">
-                        <a href=""> <img src="../image/github-svgrepo-com 1.svg" th:src="@{image/github-svgrepo-com 1.svg}" alt="">
-                        </a>
-                        <span> @john-doe on github</span>
+                    <div class="header__nav">
+                        <a href="" class="header__link">Skill</a>
+                        <a href="" class="header__link">Project</a>
+                        <a href="" class="header__link">Contact</a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+             <!-- Block name --> 
+            <div class="content ">
+                <div class="name">
+                    <div class="container   row">
+                        <div class="name__content">
+
+                             <div class="name__info">
+                                <h1>Klevtsov Dmitry</h1>
+                                <div class="name__item sity">Ukraine, Kiev</div>
+
+                                <div class="name__item phone">
+                                   <a href=""><span class="phone__telegram"></span></a>
+                                   <a href=""><span class="phone__watsapp"></span></a>
+                                   <a href=""><span class="phone__phone">+380633743814</span></a>
+                                </div>
+                              
+                                <a href=""><span class="name__item mail"> klewzow@gmail.com</span></a>
+                               <a href=""> <span class="name__item github">@on github</span> </a>
+
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit corrupti error 
+                                    architecto sequi beatae. Odio in animi aperiam voluptates, 
+                                    quae soluta quisquam repellat sint, delectus aspernatur ut fugit, nostrum iste.</p>
+
+                             </div>
+
+                             <div class="name__image">
+                                <img src="../image/logo_photo.jpg" alt="">
+                            </div>
+
+                        </div>
+        
+                    </div>
+        
+                </div>
+
+                <div class="skills  ">
+
+                    <div class="container  row">
+                        <div class="scills__data ">
+                           <div class="about"> <h1>Skill</h1></div>
+                          <div class="info">
+                 <div class="info__text">
+                    <h2> Key Skills:</h2>
+                    <div>Java, OOP</div>
+                    <div>Spring Framework</div>
+                    <div>Hibernate Framework</div>
+                    <h2>Knowledge Of Technology:</h2>
+                    <div>Java 8-16</div>
+                    <div>Multithreading. Collections Framework</div>
+                    <div>Spring Stack: Boot, MVC, Data, Security</div>
+                    <div>JDBC. JPA/Hibernate</div>
+                    <div>Servlets API</div>
+                    <div>JSP, JSTL, Thymeleaf</div>
+                    <div>MySQL</div>
+                    <div>Maven</div>
+                    <br>
+                    <div>Basics Of HTML/CSS/PHP/JavaScript</div>
+                    <div>Git, GitHub.</div>
+                  
+                 </div>
+                           <div class="skills__image"><img src="../image/skil_logo.png" alt=""></div>
+                         </div>
+                         
+                     </div>
+                          </div>
+
+
+                </div>
+            </div>
+            <footer class="footer">Footer</footer>
+     
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="header">
+        <div class="container row">
+            <div class="header__body">
+                <div class="header__logo header__item">
+                    <img src="../image/horizontal_on_white_by_logaster.png" alt="Logo" class="header__img">
+                </div>
+                <nav class="header__nav  header__item">
+                    <a href="" class="header__link">Skill</a>
+                    <a href="" class="header__link">Project</a>
+                    <a href="" class="header__link">Contact</a>
+                </nav>
+
+            </div>
+        </div>
+    </div> -->
+    <!-- Name -->
+
+
+
+    <!-- <div class="name">
+        <div class="container">
+            <div class="name__about">
+                <div class="name__contact">
+                    <h1 class="name__my">Klevtsov Dmitry</h1>
+
+                    <div class="name__item item-phone">
+                        <a href="" class="name__link watsapp"></a>
+                        <a href="" class="name__link telegram"></a>
+                        <a href="" class="name__link phone">+380633743814</a>
+
+                    </div>
+                    <div class="name__item  ">
+                        <a href="" class="name__link mail">klewzow@gmail.com</a>
+                        <a href="" class="name__link github">@on Github</a>
+                    </div>
+
+
+                    <div class="name__text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime magnam quis corporis! A,
+                        quisquam, saepe harum illo culpa mollitia repudiandae adipisci delectus voluptatum voluptate
+                        reprehenderit officia, est fugit libero beatae.
+                    </div>
+                </div>
+
+
+                <div class="name__image name__item">
+                    <img src="../image/logo_photo.jpg" alt="" class="name__logo">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="content">
+        <div class="container" style="border: 1px solid red;">
+            <div class="content__info" style="border: 1px solid blue;">
+             <h1 class="content_name">klevtsov dmitry</h1>
+             <span class="content_item sity">Ukraine, kiev</span>
+             <span class="content_item phone">
+                <a href="" class="content_item watsapp"></a>
+                <a href="" class="content_item telegram"></a>
+                <a href="" class="content_item phone">+380633743814</a>
+             </span>
+            </div>
+            <div class="logo" style="border: 1px solid green;">
+                <img src="../image/logo_photo.jpg" class="content_img"alt="">
+            </div>
+                </div>
+            </div>
+    </div> -->
+    <!-- Contact -->
+
+
+
 </body>
 
 </html>
