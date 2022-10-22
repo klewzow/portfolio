@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/iconFonts/icomoon.eot?6heyg');
+  src:  url('../fonts/iconFonts/icomoon.eot?6heyg#iefix') format('embedded-opentype'),
+    url('../fonts/iconFonts/icomoon.ttf?6heyg') format('truetype'),
+    url('../fonts/iconFonts/icomoon.woff?6heyg') format('woff'),
+    url('../fonts/iconFonts/icomoon.svg?6heyg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin_slow:before {
+  content: "\e909";
+  color: #828282;
+}
+.icon-phone:before {
+  content: "\e90a";
+}
+.icon-google_in_circle:before {
+  content: "\e900";
+}
+.icon-google_min:before {
+  content: "\e901";
+}
+.icon-google:before {
+  content: "\e902";
+}
+.icon-setting:before {
+  content: "\e903";
+}
+.icon-city:before {
+  content: "\e904";
+}
+.icon-github:before {
+  content: "\e905";
+}
+.icon-linkedin:before {
+  content: "\e906";
+}
+.icon-telegram:before {
+  content: "\e907";
+}
+.icon-whatsapp:before {
+  content: "\e908";
+}

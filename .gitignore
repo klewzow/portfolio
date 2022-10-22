@@ -10,5 +10,16 @@ test/
 *.iws
 *.iml
 *.ipr
+### GULP ###
+/src/main/**/#src/
+/src/main/**/node_modules/**
+/src/main/**/gulpfile.js
+/src/main/**/package.json
+
+/src/main/**/package-lock.json
+/src/main/**/readme.txt
+out/**
+package-lock.json
+
 
 

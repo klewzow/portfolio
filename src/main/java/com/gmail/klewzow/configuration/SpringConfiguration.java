@@ -29,10 +29,10 @@ public class SpringConfiguration implements WebMvcConfigurer {
     /* ******************************************************************* */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/image/**").addResourceLocations("classpath:/WEB-INF/image/");
-        registry.addResourceHandler("/style/**").addResourceLocations("classpath:/WEB-INF/style/");
-        registry.addResourceHandler("/fonts/**").addResourceLocations("classpath:/WEB-INF/fonts/");
-        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/WEB-INF/js/");
+        registry.addResourceHandler("/img/**").addResourceLocations("classpath:/src/img/");
+        registry.addResourceHandler("/css/**").addResourceLocations("classpath:/src/css/");
+        registry.addResourceHandler("/fonts/**").addResourceLocations("classpath:/src/fonts/");
+        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/src/js/");
         WebMvcConfigurer.super.addResourceHandlers(registry);
     }
 
@@ -40,7 +40,7 @@ public class SpringConfiguration implements WebMvcConfigurer {
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setPrefix("classpath:/WEB-INF/page/");
+        templateResolver.setPrefix("classpath:/src/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
