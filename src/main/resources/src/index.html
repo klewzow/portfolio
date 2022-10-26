@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css"/>
-    <link rel="stylesheet" href="css/iconFont.css"/>
+    <link rel="stylesheet" href="css/style.min.css" th:href="@{css/style.min.css}"/>
+    <link rel="stylesheet" href="css/iconFont.css"  th:href="@{css/iconFont.css}"/>
     <link rel="icon" type="image/x-icon" href="img/favicon.png"/>
     <title>Klevtsov</title>
 </head>
@@ -15,7 +15,7 @@
         <header class="header">
     <div class="header__container _nav"> 
     <div class="_nav__logo">
-        <a href="index.html">
+        <a href="index.html" th:href="index" >
             <img src="../img/horizontal_on_white_by_logaster.png" alt="">
         </a>
     </div>
@@ -23,7 +23,7 @@
         <ul class="_nav__link-menu">
             <li><a href="#skill" class="_nav__link-item slide">Skill</a></li>
             <li><a href="#project" class="_nav__link-item icon-setting slide">Project</a></li>
-            <li><a href="cv.html" class="_nav__link-item">Download CV</a></li>
+            <li><a href="cv.html" th:href="cv" class="_nav__link-item">Download CV</a></li>
         </ul>
     </div>
 </div>
@@ -131,7 +131,7 @@
     <div class="project__dashboard dashboard">
 
          <div class="dashboard__card">
-            <a href="java.html" class="dashboard__card-item">
+            <a href="java.html"  th:href="java" class="dashboard__card-item">
                 <div class="dashboard__card-small ibg">
                     <img src="../img/project/java.png" alt="">
                 </div>
@@ -141,7 +141,7 @@
             </a>
         </div>
         <div class="dashboard__card">
-            <a href="layout.html" class="dashboard__card-item">
+            <a href="layout.html" th:href="layout"class="dashboard__card-item">
                 <div class="dashboard__card-small ibg">
                     <img src="../img/project/layout.png" alt="">
                 </div>
@@ -151,7 +151,7 @@
             </a>
         </div>
         <div class="dashboard__card">
-            <a href="c.html" class="dashboard__card-item">
+            <a href="c.html" th:href="c" class="dashboard__card-item">
                 <div class="dashboard__card-small ibg">
                     <img src="../img/project/imgbin_c-file-input-output-png.png" alt="">
                 </div>
@@ -189,7 +189,7 @@
     </div>
 </footer>
 
-      <script src="js/script.js"></script>
+      <script src="js/script.js"  ></script>
 </body>
 
  </html>

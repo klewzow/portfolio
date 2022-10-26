@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css"/>
-    <link rel="stylesheet" href="css/iconFont.css"/>
+    <link rel="stylesheet" href="css/style.min.css" th:href="@{css/style.min.css}"/>
+    <link rel="stylesheet" href="css/iconFont.css"  th:href="@{css/iconFont.css}"/>
     <link rel="icon" type="image/x-icon" href="img/favicon.png"/>
     <title>Klevtsov</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="header__container _nav"> 
-        <div class="_nav__logo">
-            <a href="index.html">
-                <img src="../img/horizontal_on_white_by_logaster.png" alt="">
-            </a>
-        </div>
-        <div class="_nav__link _line">
-            <ul class="_nav__link-menu">
-                <li><a href="index.html#skill" class="_nav__link-item slide">Skill</a></li>
-                <li><a href="index.html#project" class="_nav__link-item icon-setting slide">Project</a></li>
-                <li><a href="#" class="_nav__link-item">Download CV</a></li>
-            </ul>
-        </div>
+    <div class="header__container _nav"> 
+    <div class="_nav__logo">
+        <a href="index.html " th:href="index">
+            <img src="../img/horizontal_on_white_by_logaster.png" alt="">
+        </a>
     </div>
-    </header>
+    <div class="_nav__link _line">
+        <ul class="_nav__link-menu">
+            <li><a href="index.html#skill" th:href="@{index#skill}"  class="_nav__link-item slide">Skill</a></li>
+            <li><a href="index.html#project"   th:href="@{index#project}" class="_nav__link-item icon-setting slide">Project</a></li>
+            <li><a href="#" class="_nav__link-item">Download CV</a></li>
+        </ul>
+    </div>
+</div>
+</header>
 
         <div class="main__body">
     <div class="main__container layout">
