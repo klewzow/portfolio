@@ -12,42 +12,20 @@ function ibg() {
 }
 ibg();
 
-var btn = document.querySelectorAll('._btn');
-for (var i = 0; i < btn.length; i++) {
-    btn[i].addEventListener('click', function (e) {
-        e.target.classList.toggle("_inactive");
-        e.target.innerHTML = e.target.innerHTML == 'Active' ? 'Inactive' : 'Active';
-    });
 
-}
-pageNav();
-function get(key) {
-    var p = window.location.search;
-    p = p.match(new RegExp(key + '=([^&=]+)'));
-    return p ? p[1] : false;
-}
 
-function pageNav() {
-    var nav = document.querySelectorAll('.footer__navigation');
-    let maxPage = MAX_PAGE;
-    let minPage = MIN_PAGE;
-    let value = DEFAULT_PAGE;
-    for (var i = 0; i < nav.length; i++) {
 
-        nav[i].addEventListener('click', function (e) {
-            value = e.target.innerHTML;
+const anchors = document.querySelectorAll('slide');
 
-            if (e.target.classList == 'footer__navigation icon-cheveron-right') {
-                value = parseInt(get("page")) + 1;
-                if (value > maxPage) value = maxPage;
-            }
-            if (e.target.classList == 'footer__navigation icon-cheveron-left') {
-                value = parseInt(get("page")) - 1;
-                if (value < minPage) value = minPage;
-            }
+for (var i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener('click', function (e) {
+        e.preventDefault();
 
-            window.location.href = '?page=' + value;
+        const blockID = anchor.getAttribute('href');
+
+        document.querySelector(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
-
-    }
-}
+    });
+} 
