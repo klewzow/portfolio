@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css"   />
-    <link rel="stylesheet" href="/css/iconFont.css"  />
-    <link rel="icon" type="image/x-icon" href="img/favicon.png"/>
+    <meta name='freelancehunt' content='20f30b4da7adf1f'>
+
+    <link rel="stylesheet" href="/css/style.css" th:href="@{${style}}" />
+    <link rel="stylesheet" href="/css/iconFont.css" th:href="@{${iconFont}}" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <title>Klevtsov</title>
 </head>
-
 <body>
     <header class="header">
     <div class="header__container _nav"> 
     <div class="_nav__logo">
-        <a href="index.html " th:href="index">
+        <a href="index.html" th:href="@{index}" >
             <img src="../img/horizontal_on_white_by_logaster.png" alt="">
         </a>
     </div>
     <div class="_nav__link _line">
         <ul class="_nav__link-menu">
-            <li><a href="index.html#skill" th:href="@{index#skill}"  class="_nav__link-item slide">Skill</a></li>
-            <li><a href="index.html#project"   th:href="@{index#project}" class="_nav__link-item icon-setting slide">Project</a></li>
-            <li><a href="#" class="_nav__link-item">Download CV</a></li>
+            <li><a href="index.html#skill"   th:href="@{index#skill}" class="_nav__link-item slide">Skill</a></li>
+            <li><a href="index.html#project" th:href="@{index#project}" class="_nav__link-item icon-setting slide">Project</a></li>
+            <li><a href="cv.html"  th:href="cv" class="_nav__link-item">Download CV</a></li>
         </ul>
     </div>
 </div>
 </header>
     <div class="cv__container" style=" text-align: center;">
-        <embed src="doc/sv.pdf" width="1024" height="1024" />
+        <embed src=" /doc/cv.pdf" th:src=" @{${doc}}"  width="1024" height="1024" />
     </div>
     <footer class="footer">
 

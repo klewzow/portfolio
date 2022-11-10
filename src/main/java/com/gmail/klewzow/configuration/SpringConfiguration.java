@@ -6,6 +6,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
@@ -16,16 +19,23 @@ import org.thymeleaf.templatemode.TemplateMode;
 @ComponentScan("com.gmail.klewzow")
 @EnableAutoConfiguration
 @EnableWebMvc
-public class SpringConfiguration implements WebMvcConfigurer {
+public class SpringConfiguration  implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
+
     @Autowired
     public SpringConfiguration(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 
+    @Bean
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
+        commonsMultipartResolver.setMaxUploadSize(-1);
+        return commonsMultipartResolver;
+    }
     /* ******************************************************************* */
-    /* GENERAL CONFIGURATION ARTIFACTS */
+    /* GENERAL CONFIGURATION THYMELEAF */
     /* ******************************************************************* */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

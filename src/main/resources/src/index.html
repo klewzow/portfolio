@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html  xmlns:th="http://www.thymeleaf.org/" lang="en">
 
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css"   />
-    <link rel="stylesheet" href="/css/iconFont.css"  />
-    <link rel="icon" type="image/x-icon" href="img/favicon.png"/>
+    <meta name='freelancehunt' content='20f30b4da7adf1f'>
+
+    <link rel="stylesheet" href="/css/style.css" th:href="@{${style}}" />
+    <link rel="stylesheet" href="/css/iconFont.css" th:href="@{${iconFont}}" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <title>Klevtsov</title>
 </head>
 
@@ -15,15 +17,15 @@
         <header class="header">
     <div class="header__container _nav"> 
     <div class="_nav__logo">
-        <a href="index.html" th:href="index" >
+        <a href="index.html" th:href="@{index}" >
             <img src="../img/horizontal_on_white_by_logaster.png" alt="">
         </a>
     </div>
     <div class="_nav__link _line">
         <ul class="_nav__link-menu">
-            <li><a href="#skill" class="_nav__link-item slide">Skill</a></li>
-            <li><a href="#project" class="_nav__link-item icon-setting slide">Project</a></li>
-            <li><a href="cv.html" th:href="cv" class="_nav__link-item">Download CV</a></li>
+            <li><a href="index.html#skill"   th:href="@{index#skill}" class="_nav__link-item slide">Skill</a></li>
+            <li><a href="index.html#project" th:href="@{index#project}" class="_nav__link-item icon-setting slide">Project</a></li>
+            <li><a href="cv.html"  th:href="cv" class="_nav__link-item">Download CV</a></li>
         </ul>
     </div>
 </div>
@@ -33,10 +35,11 @@
         <section class="main__section">
             <div class="main__text">
                 <h1 class="main__title">Dmitry Klevtsov</h1>
-                <p class="main__text">Hi, I've been developing websites and
-                    web services for more than 5 years (as a hobby). I would like to develop
-                    in this area and improve their skills to the maximum.
-                    I work in a team without problems, I learn quickly, assiduous, hardworking.</p>
+                <p class="main__text">
+                    I`ve been developing websites and web services for more than 5 years (as a hobby).
+                     I want to develop my skills to the highest professional level. I equally enjoy working 
+                     both in a team and independently. I am result-oriented, a quick learner, hardworking, diligent.
+                </p>
                 <div class="main__social social">
                     <ul class="social__item">
                         <li class="social__item-link "><span class="icon-city"></span>Ukraine, Kiev</li>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='freelancehunt' content='20f30b4da7adf1f'>
+
+    <link rel="stylesheet" href="/css/style.css" th:href="@{${style}}" />
+    <link rel="stylesheet" href="/css/iconFont.css" th:href="@{${iconFont}}" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <title>Klevtsov</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__container _nav"> 
+    <div class="_nav__logo">
+        <a href="index.html " th:href="index">
+            <img src="../img/horizontal_on_white_by_logaster.png" alt="">
+        </a>
+    </div>
+    <div class="_nav__link _line">
+        <ul class="_nav__link-menu">
+            <li><a href="index.html#skill" th:href="@{index#skill}"  class="_nav__link-item slide">Skill</a></li>
+            <li><a href="index.html#project"   th:href="@{index#project}" class="_nav__link-item icon-setting slide">Project</a></li>
+            <li><a href="cv" class="_nav__link-item">Download CV</a></li>
+        </ul>
+    </div>
+</div>
+</header>
+
+        <section>
+
+    <div class="section__container add_article_form">
+        <h1 class="add_article_form__title"> Добавление работы </h1>
+        <form class="add_article_form__form" enctype="multipart/form-data" th:method="POST" th:action="@{/admin}"
+            th:object="${work}">
+
+            <input type="hidden" th:field="*{id}">
+            <ul class="add_article_form__ul">
+                <li class="add_article_form__li">
+                    <label class="add_article_form__label" for="linkDemoProject">Ссылка на демо</label>
+                    <input class="add_article_form__input" type="text" th:field="*{linkDemoProject}"
+                        id="linkDemoProject">
+                </li>
+                <li class="add_article_form__li">
+
+                    <label class="add_article_form__label" for="linkCodeProject">Ссылка на код</label>
+                    <input class="add_article_form__input" type="text" th:field="*{linkCodeProject}"
+                        id="linkCodeProject">
+                    <div class="add_article_form__errors" th:if="${#fields.hasErrors('linkCodeProject')}"
+                        th:errors="*{linkCodeProject}"></div>
+                </li>
+                <li class="add_article_form__li">
+                    <label class="add_article_form__label" for="titleProject">Описание</label>
+                    <input class="add_article_form__input" type="text" th:field="*{titleProject}" id="titleProject">
+                    <div class="add_article_form__errors" th:if="${#fields.hasErrors('titleProject')}"
+                        th:errors="*{titleProject}"></div>
+                </li>
+                <li class="add_article_form__li">
+
+                    <label class="add_article_form__label" for="subTitleProject">Методики</label>
+                    <input class="add_article_form__input" type="text" th:field="*{subTitleProject}"
+                        id="subTitleProject">
+                    <div class="add_article_form__errors" th:if="${#fields.hasErrors('subTitleProject')}"
+                        th:errors="*{subTitleProject}"></div>
+
+                </li>
+                <li class="add_article_form__li">
+                    <label class="add_article_form__file" htmlFor="file">Файл заставки</label>
+                    <input type="file" th:field="*{file}" id="fileImagine">
+                    <div class="add_article_form__errors" th:if="${#fields.hasErrors('file')}"
+                        th:errors="*{file}"></div>
+                        <input type="hiden" th:field="fileName">
+
+                </li>
+                <li class="add_article_form__li add_article_form__ratio">
+                    <div class="">
+                        <input type="radio" id="java" name="language" value="JAVA" checked>
+                        <label class="add_article_form__label" for="java">Java</label>
+                    </div>
+
+                    <div class="">
+                        <input type="radio" id="html" name="language" value="HTML">
+                        <label class="add_article_form__label" for="html">Html</label>
+                    </div>
+
+                    <div class="">
+                        <input type="radio" id="c" name="language" value="C">
+                        <label class="add_article_form__label" for="c">C#</label>
+                    </div>
+
+                </li>
+
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+            <button class="add_article_form__button" type="submit">Сохранить</button>
+        </form>
+
+</section>
+
+        <footer class="footer">
+
+    <div class="footer__container">
+        <div class="footer__link">
+            <a href="mailto:klewzow@gmail.com"> <span class="icon-google_min footer__item"></span></a>
+            <a href="https://github.com/klewzow?tab=repositories" target="_blank"> <span
+                    class="icon-github footer__item"></span></a>
+            <a href="https://t.me/klevtsovDmitry" target="_blank"> <span class="icon-telegram footer__item"></span></a>
+            <a href="https://wa.me/+380633743814" target="_blank"> <span class="icon-whatsapp footer__item"></span></a>
+        </div>
+        <div class="footer__copyright">
+            copyright © 2022
+        </div>
+
+    </div>
+</footer>
+
+
+              <script src="js/script.js"></script>
+</body>
+
+ </html>
